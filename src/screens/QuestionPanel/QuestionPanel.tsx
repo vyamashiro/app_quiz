@@ -9,7 +9,7 @@ export const QuestionPanel = () => {
   return (
     <View style={styles.container}>
       
-      <Text style={styles.text}>Selecione a aula que quer praticar</Text>
+      <Text style={styles.text}>Selecione uma aula abaixo</Text>
 
       <View style={styles.quizes}>
 
@@ -21,27 +21,27 @@ export const QuestionPanel = () => {
           <Text style={styles.textButton}>Aula 2</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('quiz')}>
+        <TouchableOpacity style={styles.button} disabled>
           <Text style={styles.textButton}>Aula 3</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('quiz')}>
+        <TouchableOpacity style={styles.button} disabled>
           <Text style={styles.textButton}>Aula 4</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('quiz')}>
+        <TouchableOpacity style={styles.button} disabled>
           <Text style={styles.textButton}>Aula 5</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('quiz')}>
+        <TouchableOpacity style={styles.button} disabled>
           <Text style={styles.textButton}>Aula 6</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('quiz')}>
+        <TouchableOpacity style={styles.button} disabled>
           <Text style={styles.textButton}>Aula 7</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('quiz')}>
+        <TouchableOpacity style={styles.button} disabled>
           <Text style={styles.textButton}>Aula 8</Text>
         </TouchableOpacity>
       
