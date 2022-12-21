@@ -6,13 +6,13 @@ export const styles = StyleSheet.create({
     backgroundColor: '#131016',
     alignItems: 'center',
     padding: 40,
+    justifyContent: 'center',
   },
   quizes: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignContent: 'center',
     alignItems: 'center',
-    justifyContent: 'center',
   },
   button: {
     width: 150,

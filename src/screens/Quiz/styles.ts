@@ -22,7 +22,6 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
   alternative: {
-    flex: 1,
     width: 350,
     borderColor: '#ffffffb7',
     borderWidth: 3,
@@ -33,7 +32,6 @@ export const styles = StyleSheet.create({
   },
   correctAlternative: {
     backgroundColor: '#31CF67',
-    flex: 1,
     width: 350,
     borderColor: '#ffffffb7',
     borderWidth: 3,
@@ -44,7 +42,6 @@ export const styles = StyleSheet.create({
   },
   incorrectAlternative: {
     backgroundColor: 'rgb(232, 8, 64)',
-    flex: 1,
     width: 350,
     borderColor: '#ffffffb7',
     borderWidth: 3,
@@ -65,7 +62,7 @@ export const styles = StyleSheet.create({
     // fontFamily: "Aria"
   },
   sectionButton: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginTop: 20,
   },
   button: {
@@ -89,6 +86,6 @@ export const styles = StyleSheet.create({
   textButton: {
     color: '#fff',
     fontSize: 14,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   }
 });

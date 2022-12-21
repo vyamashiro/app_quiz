@@ -18,7 +18,7 @@ export const Quiz = () => {
     setQuestion(prevState => prevState - 1);
   }
 
-  const alternativeIsCorrect = ({isCorrect}) => {
+  const alternativeIsCorrect = ({isCorrect}: any) => {
     setIsCorrectAnswer(isCorrect)
 
 
@@ -38,7 +38,7 @@ export const Quiz = () => {
         <Text style={styles.explainText}>Selecione uma das opções abaixo:</Text>
       </View>
 
-      <View>
+      {/* <View> */}
         <ScrollView showsVerticalScrollIndicator={false}>
           {
             quizes[question].alternatives.map(alternative =>
@@ -54,9 +54,9 @@ export const Quiz = () => {
             )
           }
         </ScrollView>
-      </View>
+      {/* </View> */}
 
-      <View style={styles.sectionButton}>
+      <View style={styles.sectionButton}> 
       
         <TouchableOpacity style={styles.button} onPress={handlePreviousQuestion}>
           <Text style={styles.textButton}>Voltar</Text>
