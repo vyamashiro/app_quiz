@@ -30,6 +30,16 @@ export const styles = StyleSheet.create({
     marginTop: 5,
     marginBottom: 5,
   },
+  pressedAlternative: {
+    backgroundColor: 'rgb(30, 167, 253)',
+    width: 350,
+    borderColor: '#ffffffb7',
+    borderWidth: 3,
+    borderRadius: 5,
+    padding: 20,
+    marginTop: 5,
+    marginBottom: 5,
+  },
   correctAlternative: {
     backgroundColor: '#31CF67',
     width: 350,

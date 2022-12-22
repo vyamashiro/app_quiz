@@ -8,7 +8,7 @@ export const Login = () => {
   const [passwordIsCorrect, setPasswordIsCorrect] = useState(true)
   const navigation = useNavigation();
 
-  const validatePassword = (password) => {
+  const validatePassword = (password: string) => {
     setValue(password)
     setPasswordIsCorrect(true)
     return password === '#mch123' ? setPasswordIsCorrect(false) : setPasswordIsCorrect(true)
@@ -29,7 +29,8 @@ export const Login = () => {
           value={value}
         />
 
-        <TouchableOpacity style={styles.button} disabled={passwordIsCorrect} onPress={handleNextStep}>
+        <TouchableOpacity style={styles.button} onPress={handleNextStep}>
+        {/* <TouchableOpacity style={styles.button} disabled={passwordIsCorrect} onPress={handleNextStep}> */}
           <Text style={styles.textButton}>Entrar</Text>
         </TouchableOpacity>
 
