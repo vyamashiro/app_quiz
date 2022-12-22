@@ -1,5 +1,4 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 import { Login } from '../screens/Login/Login';
 import { QuestionPanel } from '../screens/QuestionPanel/QuestionPanel';
 import { Quiz } from '../screens/Quiz/Quiz';

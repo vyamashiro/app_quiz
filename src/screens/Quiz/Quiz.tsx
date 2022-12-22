@@ -12,6 +12,8 @@ export const Quiz = () => {
   const [namePressedAlternative, setNamePressedAlternative] = useState('');
   const [isCorrectAnswer, setIsCorrectAnswer] = useState(false);
   const [correctAlternative, setCorrectAlternative] = useState(false);
+  const [activeDisabled, setActiveDisabled] = useState(false);
+  
   const navigation = useNavigation();
   
   const totalQuestions = quizes.length
@@ -29,6 +31,7 @@ export const Quiz = () => {
     setQuestion(prevState => prevState + 1);
     setIsCorrectAnswer(false)
     setCorrectAlternative(false)
+    setActiveDisabled(false)
   };
 
   const handlePreviousQuestion = () => {
@@ -45,7 +48,7 @@ export const Quiz = () => {
     pressedAlternative === true ? true : Alert.alert("", "Você precisa selecionar uma opção antes de apertar o botão de corrigir")
     setCorrectAlternative(true)
     // Congelar a possibilidade de pressionar os botões, ou seja disabled
-
+    setActiveDisabled(true)
   }
 
   return (
@@ -70,6 +73,7 @@ export const Quiz = () => {
                 (namePressedAlternative === alternative.alternative && isCorrectAnswer === false && correctAlternative) ? styles.incorrectAlternative :
                 namePressedAlternative === alternative.alternative ? styles.pressedAlternative : styles.alternative}
               onPress={() => handlePressedAlternative(alternative)}
+              disabled={activeDisabled}
             >
               <Text style={styles.alternativeText}>
                 {alternative.alternative}
