@@ -3,6 +3,7 @@ import { TouchableOpacity, Alert, Text, View, ScrollView } from 'react-native';
 import { styles } from './styles';
 import { quizes } from '../../staticData/quizes';
 import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const Quiz = () => {
   const [question, setQuestion] = useState(0);
@@ -26,12 +27,18 @@ export const Quiz = () => {
   useEffect(function handleLastQuestion() {
     atualQuestion === totalQuestions - 1 ? setIsLastQuestion(true) : setIsLastQuestion(false)
   }, [question]);
+
+  const thereIsButtonPressed = () => pressedAlternative === true ? true : Alert.alert("", "Você precisa selecionar uma alternativa")
   
   const handleNextQuestion = () => {
-    setQuestion(prevState => prevState + 1);
-    setIsCorrectAnswer(false)
-    setCorrectAlternative(false)
-    setActiveDisabled(false)
+    if(thereIsButtonPressed() && correctAlternative) {
+      setQuestion(prevState => prevState + 1);
+      setIsCorrectAnswer(false)
+      setCorrectAlternative(false)
+      setActiveDisabled(false)
+    } else {
+      Alert.alert("", "Você precisa pressionar o botão corrigir antes de prosseguir")
+    }
   };
 
   const handlePreviousQuestion = () => {
@@ -45,10 +52,19 @@ export const Quiz = () => {
   }
 
   const handleCorrect = () => {
-    pressedAlternative === true ? true : Alert.alert("", "Você precisa selecionar uma opção antes de apertar o botão de corrigir")
+    thereIsButtonPressed()
     setCorrectAlternative(true)
-    // Congelar a possibilidade de pressionar os botões, ou seja disabled
-    setActiveDisabled(true)
+    setActiveDisabled(true) // Desabilita a possibilidade de pressionar os botões, após a correção.
+
+    // async () => {
+    //   try {
+    //     const jsonStringfy = JSON.stringify(isCorrectAnswer)
+    //     await AsyncStorage.setItem('answer_question_1', jsonStringfy)
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // }
+    
   }
 
   return (
