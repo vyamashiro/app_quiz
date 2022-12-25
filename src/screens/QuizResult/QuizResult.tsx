@@ -2,12 +2,21 @@ import { useState } from 'react';
 import { TouchableOpacity, ScrollView, Text, View } from 'react-native';
 import { styles } from './styles';
 import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const QuizResult = () => {
-  const quizResult = [true, false, true, true, true];
-  const totalQuestions = quizResult.length;
-  const totalCorrectQuestions = quizResult.filter((item) => item === true).length;
   const navigation = useNavigation();
+  const [totalQuestions, setTotalQuestions] = useState<any>();
+  const [totalCorrectQuestions, setTotalCorrectQuestions] = useState<any>();
+  
+  const getData = async () => {    
+    const data: any = await AsyncStorage.getItem('@answer_question')
+    const quizResult = JSON.parse(data)
+    setTotalQuestions(quizResult.length);
+    setTotalCorrectQuestions(quizResult.filter((item: any) => item === true).length)
+  };
+  
+  getData()
 
   return (
     <View style={styles.container}>

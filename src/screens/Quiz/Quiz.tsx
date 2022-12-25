@@ -31,13 +31,24 @@ export const Quiz = () => {
   const thereIsButtonPressed = () => pressedAlternative === true ? true : Alert.alert("", "Você precisa selecionar uma alternativa")
   
   const handleNextQuestion = () => {
-    if(thereIsButtonPressed() && correctAlternative) {
+    if(!pressedAlternative) {
+      thereIsButtonPressed()
+    }
+
+    if(pressedAlternative && !correctAlternative) {
+      Alert.alert("", "Você precisa pressionar o botão 'corrigir' antes de prosseguir")
+    }
+
+    if(pressedAlternative && correctAlternative) {
       setQuestion(prevState => prevState + 1);
       setIsCorrectAnswer(false)
       setCorrectAlternative(false)
       setActiveDisabled(false)
-    } else {
-      Alert.alert("", "Você precisa pressionar o botão corrigir antes de prosseguir")
+
+      console.log('isLastQuestion', isLastQuestion);
+
+      isLastQuestion ? AsyncStorage.clear() : null
+
     }
   };
 
@@ -51,20 +62,22 @@ export const Quiz = () => {
     setNamePressedAlternative(alternative.alternative)
   }
 
-  const handleCorrect = () => {
+  const handleCorrect = async () => {
     thereIsButtonPressed()
     setCorrectAlternative(true)
     setActiveDisabled(true) // Desabilita a possibilidade de pressionar os botões, após a correção.
 
-    // async () => {
-    //   try {
-    //     const jsonStringfy = JSON.stringify(isCorrectAnswer)
-    //     await AsyncStorage.setItem('answer_question_1', jsonStringfy)
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
-    
+    const data: any = await AsyncStorage.getItem('@answer_question');
+
+    if(data !== null) {
+      const newData = [isCorrectAnswer];
+      newData.push(JSON.parse(data))  
+      const jsonStringfy = JSON.stringify(newData)
+      await AsyncStorage.setItem('@answer_question', jsonStringfy);
+    } else {
+      const jsonStringfy = JSON.stringify(isCorrectAnswer)
+      await AsyncStorage.setItem('@answer_question', jsonStringfy);
+    }
   }
 
   return (
