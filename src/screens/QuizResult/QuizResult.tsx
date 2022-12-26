@@ -18,6 +18,12 @@ export const QuizResult = () => {
   
   getData()
 
+  const handleFinishQuiz = () => {
+    AsyncStorage.clear()
+    navigation.navigate('questionPainel')
+  }
+
+
   return (
     <View style={styles.container}>
       
@@ -29,7 +35,7 @@ export const QuizResult = () => {
           <Text style={styles.textButton}>Voltar</Text>
         </TouchableOpacity>
       
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('questionPainel')}>
+        <TouchableOpacity style={styles.button} onPress={handleFinishQuiz}>
           <Text style={styles.textButton}>Finalizar</Text>
         </TouchableOpacity>
       
