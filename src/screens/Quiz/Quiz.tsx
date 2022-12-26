@@ -44,11 +44,6 @@ export const Quiz = () => {
       setIsCorrectAnswer(false)
       setCorrectAlternative(false)
       setActiveDisabled(false)
-
-      console.log('isLastQuestion', isLastQuestion);
-
-      isLastQuestion ? AsyncStorage.clear() : null
-
     }
   };
 
@@ -60,7 +55,7 @@ export const Quiz = () => {
     setIsCorrectAnswer(alternative.isCorrect)
     setPressedAlternative(true)
     setNamePressedAlternative(alternative.alternative)
-  }
+  };
 
   const handleCorrect = async () => {
     thereIsButtonPressed()
@@ -70,13 +65,13 @@ export const Quiz = () => {
     const data: any = await AsyncStorage.getItem('@answer_question');
 
     if(data !== null) {
-      const newData = [isCorrectAnswer];
-      newData.push(JSON.parse(data))  
-      const jsonStringfy = JSON.stringify(newData)
-      await AsyncStorage.setItem('@answer_question', jsonStringfy);
+      const newData = JSON.parse(data)
+      newData.push(isCorrectAnswer)
+      const dataStringfy = JSON.stringify(newData)
+      await AsyncStorage.setItem('@answer_question', dataStringfy);
     } else {
-      const jsonStringfy = JSON.stringify(isCorrectAnswer)
-      await AsyncStorage.setItem('@answer_question', jsonStringfy);
+      const dataStringfy: any = JSON.stringify([isCorrectAnswer])      
+      await AsyncStorage.setItem('@answer_question', dataStringfy);
     }
   }
 
