@@ -17,7 +17,7 @@ export const QuestionPanel = () => {
           <Text style={styles.textButton}>Aula 1</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('quiz')}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.textButton}>Aula 2</Text>
         </TouchableOpacity>
 
