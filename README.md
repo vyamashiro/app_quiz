@@ -18,12 +18,15 @@
 
 <h2>Business Rules</h2>
 <ul>
-  <ul>Question
-    <li>When correcting a question, the color of the alternative should change to green if it is correct and red if it is wrong</li>
-    <li>Not allow user go to next question until select one alternative</li>
-    <li>Not allow user go to next question without correct the question</li>
+  <li>Question</li>
+    <ul>
+      <li>When correcting a question, the color of the alternative should change to green if it is correct and red if it is wrong</li>
+      <li>Not allow user go to next question until select one alternative</li>
+      <li>Not allow user go to next question without correct the question</li>
+    </ul>
   </ul>
-  <ul>Result
+  <li>Result</li>
+  <ul>
     <li>Should show the number of total questions</li>
     <li>Should show the number of correct questions</li>
   </ul>
