@@ -26,10 +26,10 @@
     </ul>
   </ul>
   <li>Result</li>
-  <ul>
-    <li>Should show the number of total questions</li>
-    <li>Should show the number of correct questions</li>
-  </ul>
+    <ul>
+      <li>Should show the number of total questions</li>
+      <li>Should show the number of correct questions</li>
+    </ul>
 </ul>
 
 <figure>
