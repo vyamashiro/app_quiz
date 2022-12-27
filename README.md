@@ -33,6 +33,7 @@
 </ul>
 
 <figure>
+    <img src="./assets/demo/app_quiz_demo.gif">
     <img src="./assets/app_quiz_screenshot1.png">
     <img src="./assets/app_quiz_screenshot2.png">
     <img src="./assets/app_quiz_screenshot3.png">
