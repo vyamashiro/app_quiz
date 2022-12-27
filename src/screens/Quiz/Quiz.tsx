@@ -109,9 +109,9 @@ export const Quiz = () => {
 
       <View style={styles.sectionButton}> 
       
-        <TouchableOpacity style={styles.button} onPress={isFirstQuestion ? () => navigation.navigate('questionPainel') : handlePreviousQuestion}>
+        {/* <TouchableOpacity style={styles.button} onPress={isFirstQuestion ? () => navigation.navigate('questionPainel') : handlePreviousQuestion}>
           <Text style={styles.textButton}>Voltar</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <TouchableOpacity style={styles.buttonCorrect} onPress={handleCorrect}>
           <Text style={styles.textButton}>Corrigir</Text>
