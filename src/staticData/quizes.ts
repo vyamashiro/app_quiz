@@ -135,7 +135,7 @@ export const quizes = [
       },
       {
         "id_alternative": "02",
-        "alternative": "criar uma separação/divisão na página",
+        "alternative": "Criar uma separação/divisão na página",
         "isCorrect": false,
       },
       {
@@ -145,12 +145,12 @@ export const quizes = [
       },
       {
         "id_alternative": "04",
-        "alternative": "negrito",
+        "alternative": "Negrito",
         "isCorrect": false,
       },
       {
         "id_alternative": "05",
-        "alternative": "itálico",
+        "alternative": "Itálico",
         "isCorrect": false,
       },
     ]
