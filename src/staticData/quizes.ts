@@ -1,32 +1,16 @@
 export const quizes = [
   {
-    // "Question": "Qual a diferença entre a tag &lt;span&gt; e a tag &lt;div&gt; ?"
     "id_question": "00001",
-    "question": "Qual a diferença entre a tag <span> e a tag <div> ?",
+    "question": "A tag <div> define uma divisão ou seção em um documento HTML. Verdadeiro ou falso ?",
     "alternatives": [
       {
         "id_alternative": "01",
-        "alternative": "Resposta A",
+        "alternative": "Verdadeiro",
         "isCorrect": true,
       },
       {
         "id_alternative": "02",
-        "alternative": "Resposta B",
-        "isCorrect": false,
-      },
-      {
-        "id_alternative": "03",
-        "alternative": "Resposta C",
-        "isCorrect": false,
-      },
-      {
-        "id_alternative": "04",
-        "alternative": "Resposta D",
-        "isCorrect": false,
-      },
-      {
-        "id_alternative": "05",
-        "alternative": "Resposta E",
+        "alternative": "Falso",
         "isCorrect": false,
       },
     ]
@@ -95,6 +79,22 @@ export const quizes = [
   },
   {
     "id_question": "00004",
+    "question": "A tag <span> é um container 'em linha' (inline) usado para marcar uma parte de um texto ou uma parte de um documento. Verdadeiro ou falso ?",
+    "alternatives": [
+      {
+        "id_alternative": "01",
+        "alternative": "Verdadeiro",
+        "isCorrect": true,
+      },
+      {
+        "id_alternative": "02",
+        "alternative": "Falso",
+        "isCorrect": false,
+      },
+    ]
+  },
+  {
+    "id_question": "00005",
     "question": "Das opções abaixo quais tags não possuem fechamento ?",
     "alternatives": [
       {
@@ -125,7 +125,7 @@ export const quizes = [
     ]
   },
   {
-    "id_question": "00005",
+    "id_question": "00006",
     "question": "Para o que serve a tag <br> ?",
     "alternatives": [
       {
@@ -156,7 +156,7 @@ export const quizes = [
     ]
   },
   {
-    "id_question": "00006",
+    "id_question": "00007",
     "question": "A tag responsável por criar hyperlink é a tag <link>. Verdadeiro ou falso ?",
     "alternatives": [
       {
@@ -167,6 +167,22 @@ export const quizes = [
       {
         "id_alternative": "02",
         "alternative": "Falso",
+        "isCorrect": true,
+      },
+    ]
+  },
+  {
+    "id_question": "00008",
+    "question": "Qual a diferença entre a tag <span> e a tag <div> ?",
+    "alternatives": [
+      {
+        "id_alternative": "01",
+        "alternative": "Enquanto a tag <span> é usada para definir uma seção ou divisão a tag <div> é usada para elementos em linha (inline)",
+        "isCorrect": false,
+      },
+      {
+        "id_alternative": "02",
+        "alternative": "Enquanto a tag <div> é usada para definir uma seção ou divisão a tag <span> é usada para elementos em linha (inline)",
         "isCorrect": true,
       },
     ]
