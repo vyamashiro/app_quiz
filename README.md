@@ -1,5 +1,8 @@
 <h1>App Mobile</h1>
+
 <p>A simple mobile app for create questions.</p>
+<br/>
+<p>Password to access the application: #mch123</p>
 
 <h2>Stack</h2>
 <ul>
@@ -13,6 +16,7 @@
 <h2>Next Features</h2>
 <ul>
   <li>Icon for app and loading</li>
+  <li>User register and Login</li>
   <li>Database</li>
 </ul>
 

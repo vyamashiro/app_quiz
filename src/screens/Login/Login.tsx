@@ -29,8 +29,7 @@ export const Login = () => {
           value={value}
         />
 
-        <TouchableOpacity style={styles.button} onPress={handleNextStep}>
-        {/* <TouchableOpacity style={styles.button} disabled={passwordIsCorrect} onPress={handleNextStep}> */}
+        <TouchableOpacity style={styles.button} disabled={passwordIsCorrect} onPress={handleNextStep}>
           <Text style={styles.textButton}>Entrar</Text>
         </TouchableOpacity>
 
