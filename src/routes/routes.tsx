@@ -9,10 +9,10 @@ const {  Navigator, Screen } = createNativeStackNavigator();
 export function AppRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
-        <Screen name="login" component={Login} />
-        <Screen name="questionPainel" component={QuestionPanel} />
-        <Screen name="quiz" component={Quiz} />
-        <Screen name="quizResult" component={QuizResult} />
+      {/* <Screen name="login" component={Login} /> */}
+      <Screen name="questionPainel" component={QuestionPanel} />
+      <Screen name="quiz" component={Quiz} />
+      <Screen name="quizResult" component={QuizResult} />
     </Navigator>
   )
 }
